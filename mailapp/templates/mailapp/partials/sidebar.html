@@ -1,0 +1,17 @@
+{% load static %}
+<div class="sidebar">
+  <div class="logo">
+    <img src="{% static 'images/logos/logo.svg' %}" alt="MailClient">
+  </div>
+  <nav>
+    <a href="{% url 'inbox' %}" class="{% if request.path == '/inbox/' %}active{% endif %}">
+      <i class="fas fa-inbox"></i>
+      <span>Входящие</span>
+      <span class="badge">{{ unread_count }}</span>
+    </a>
+    <a href="{% url 'compose' %}">
+      <i class="fas fa-pen"></i>
+      <span>Написать</span>
+    </a>
+  </nav>
+</div>

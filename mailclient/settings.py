@@ -22,6 +22,8 @@ ALLOWED_HOSTS = []
 
 AUTH_USER_MODEL = 'mailapp.User'
 
+STATICFILES_DIRS = [BASE_DIR / 'static']
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
