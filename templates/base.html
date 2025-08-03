@@ -4,21 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Mail Client{% endblock %}</title>
+    {% load static %}
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <script src="{% static 'js/scripts.js' %}" defer></script>
 </head>
 <body>
     <header>
-        <h1>Mail Client</h1>
+        <h1>Помошник АКГО</h1>
     </header>
 
     <main>
         {% block content %}
         {% endblock %}
     </main>
-
-    <footer>
-        <p>&copy; 2025 MailClient</p>
-    </footer>
 </body>
 </html>

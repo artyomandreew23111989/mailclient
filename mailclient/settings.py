@@ -24,6 +24,13 @@ AUTH_USER_MODEL = 'mailapp.User'
 
 STATICFILES_DIRS = [BASE_DIR / 'static']
 
+ASGI_APPLICATION = 'project_root.asgi.application'
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels.layers.InMemoryChannelLayer'
+    }
+}
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -32,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mailapp',
+    'channels',
     'crispy_forms',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

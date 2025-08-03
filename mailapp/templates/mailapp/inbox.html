@@ -5,30 +5,16 @@
 {% block content %}
 <section class="inbox">
     <h2>Входящие</h2>
-    <ul id="email-list">
-        <li class="email-item">
-            <span class="email-subject">Пример письма</span>
-            <button class="view-button" onclick="viewEmail('Пример письма', 'Текст письма...')">Открыть</button>
-        </li>
-    </ul>
+    <ul id="email-list"></ul>
 </section>
 
 <section class="compose">
     <h2>Новое письмо</h2>
     <form id="compose-form">
-        <input type="email" placeholder="Кому" required>
-        <input type="text" placeholder="Тема" required>
-        <textarea placeholder="Сообщение" required></textarea>
+        <input type="email" id="to" placeholder="Кому" required>
+        <input type="text" id="subject" placeholder="Тема" required>
+        <textarea id="body" placeholder="Сообщение" rows="10" cols="50" required></textarea>
         <button type="submit">Отправить</button>
     </form>
 </section>
-
-<!-- Модальное окно -->
-<div id="modal" class="modal hidden">
-    <div class="modal-content">
-        <span id="modal-close">&times;</span>
-        <h3 id="modal-subject"></h3>
-        <p id="modal-body"></p>
-    </div>
-</div>
 {% endblock %}
